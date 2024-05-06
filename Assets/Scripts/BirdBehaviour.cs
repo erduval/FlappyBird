@@ -11,14 +11,12 @@ public class BirdBehaviour : MonoBehaviour
 
     void Start()
     {
-
+        Rigidbody.velocity = Vector2.up * JumpForce;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Rigidbody.velocity = Vector2.up * JumpForce;

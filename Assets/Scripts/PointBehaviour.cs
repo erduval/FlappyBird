@@ -16,13 +16,8 @@ public class PointBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.tag == "Pipe" && collision.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Point");
             GameManager.Instance.AddScore(1);
         }
     }
